@@ -10,3 +10,4 @@ tsconfig.json
 .husky
 playground
 vite.config.ts
+tests
