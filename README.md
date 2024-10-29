@@ -1,6 +1,6 @@
 <div align="center">
 	<a href="https://npmjs.com/package/vue-craftcms"  align="center">
-		<img src="https://online-images-sr.netlify.app/assets/vue-craftcms.png"  alt="Vue craft sdk banner">
+		<img src="https://online-images-sr.netlify.app/assets/vue-craft-sdk.png"  alt="Vue craftcms banner">
 	</a>
 	<h1 align="center">vue-craftcms</h1>
   <p align="center">
@@ -11,10 +11,10 @@
 
 <p align="center">
   <a href="https://npmjs.com/package/vue-craftcms">
-    <img src="https://img.shields.io/npm/v/vue-craftcms/latest.svg?style=flat-square" alt="Vue craft sdk latest version" />
+    <img src="https://img.shields.io/npm/v/vue-craftcms/latest.svg?style=flat-square" alt="Vue craftcms latest version" />
   </a>
   <a href="https://npmjs.com/package/vue-craftcms" rel="nofollow">
-    <img src="https://img.shields.io/npm/dt/vue-craftcms.svg?style=flat-square" alt="Vue craft sdk downloads">
+    <img src="https://img.shields.io/npm/dt/vue-craftcms.svg?style=flat-square" alt="Vue craftcms downloads">
   </a>
 </p>
 
