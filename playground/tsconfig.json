@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@vue-craftcms": ["../lib/main.ts"]
+    }
+  },
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Vue",
+  "include": ["./**/*.vue", "./**/*.ts", "../lib/**/*.ts", "*.d.ts"],
+  "exclude": ["node_modules/*"]
+}
