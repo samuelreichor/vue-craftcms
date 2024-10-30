@@ -1,11 +1,11 @@
-import { CraftSdk } from '@vue-craftcms';
+import { CraftCms } from '@vue-craftcms';
 
 import { createApp } from 'vue';
 import App from './App.vue';
 
 const app = createApp(App);
 
-app.use(CraftSdk, {
+app.use(CraftCms, {
   baseUrl: 'https://backend-craftcms.ddev.site',
   debug: true,
   registerComponents: true,

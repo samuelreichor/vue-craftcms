@@ -1,6 +1,6 @@
 import { inject } from 'vue';
-import type { CraftSdkOptions } from '../types';
+import type { CraftCmsOptions } from '../types';
 
-export function useCraft(): CraftSdkOptions {
-  return inject<CraftSdkOptions>('CraftSdkOptions')!;
+export function useCraft(): CraftCmsOptions {
+  return inject<CraftCmsOptions>('CraftCmsOptions')!;
 }

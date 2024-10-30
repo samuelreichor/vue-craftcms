@@ -33,15 +33,15 @@ npm install -D vue-craftcms
 Register the plugin on your application (usually in main.ts) and add the baseUrl to your craft cms backend
 
 ```typescript
-import { CraftSdk } from 'craft-vue-sdk';
+import { CraftCms } from '@vue-craftcms';
 import { createApp } from 'vue';
 import App from './App.vue';
 
 const app = createApp(App);
 
-app.use(CraftSdk, {
+app.use(CraftCms, {
   baseUrl: 'https://backend-craftcms.ddev.site',
-  debug: false,
+  debug: true,
   registerComponents: true,
 });
 

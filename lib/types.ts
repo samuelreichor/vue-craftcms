@@ -9,8 +9,8 @@ export type Config = {
   };
 };
 
-export type CraftSdkOptions = {
+export type CraftCmsOptions = {
   baseUrl: string;
-  registerComponents?: boolean;
-  debug?: boolean;
+  registerComponents: boolean;
+  debug: boolean;
 };
