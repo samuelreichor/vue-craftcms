@@ -1,29 +1,29 @@
 import CraftPage from './components/CraftPage.vue';
 import CraftArea from './components/CraftArea.vue';
 import type { App } from 'vue';
-import type { CraftSdkOptions } from './types';
+import type { CraftCmsOptions } from './types';
 
 export * from './composables/useCraftUrlBuilder';
 export * from './composables/useApi';
 export * from './types';
 
-export const defaultOptions: CraftSdkOptions = {
-  baseUrl: 'default.com',
+export const defaultOptions: CraftCmsOptions = {
+  baseUrl: '',
   registerComponents: true,
   debug: false,
 };
 
-export const CraftSdk = {
-  install(app: App, options: CraftSdkOptions = defaultOptions) {
+export const CraftCms = {
+  install(app: App, options: CraftCmsOptions = defaultOptions) {
     if (options.registerComponents) {
       app.component('CraftPage', CraftPage);
       app.component('CraftArea', CraftArea);
     }
 
-    app.provide('CraftSdkOptions', options);
+    app.provide('CraftCmsOptions', options);
 
     if (options.debug) {
-      console.log('Craft SDK Options:', options);
+      console.log('Craft CMS Options', options);
     }
   },
 };
