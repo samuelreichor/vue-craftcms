@@ -1,5 +1,11 @@
 # vue-craftcms
 
+## 0.1.2
+
+### Patch Changes
+
+- 462dd00: Add better error handling in craft page component and add not implemented component
+
 ## 0.1.1
 
 ### Patch Changes
