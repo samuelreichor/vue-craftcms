@@ -1,5 +1,6 @@
 import CraftPage from './components/CraftPage.vue';
 import CraftArea from './components/CraftArea.vue';
+import CraftNotImplemented from './components/CraftNotImplemented.vue';
 import type { App } from 'vue';
 import type { CraftCmsOptions } from './types';
 
@@ -18,6 +19,7 @@ export const CraftCms = {
     if (options.registerComponents) {
       app.component('CraftPage', CraftPage);
       app.component('CraftArea', CraftArea);
+      app.component('CraftNotImplemented', CraftNotImplemented);
     }
 
     app.provide('CraftCmsOptions', options);

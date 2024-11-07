@@ -15,34 +15,40 @@
   });
 
   function getCurrentSectionHandle(): string {
-    if (!props.content) {
-      throw new Error('Content is missing.');
-    }
-
     if (!('sectionHandle' in props.content)) {
-      throw new Error('props.content has no key named sectionHandle');
+      return '404';
     }
-
     return props.content.sectionHandle;
   }
 
   function getCurrentPage() {
     const currentSectionHandle = getCurrentSectionHandle();
-    if (!currentSectionHandle) {
-      throw new Error('Invalid section handle.');
+    if (currentSectionHandle === '404') {
+      return getErrorPage('404');
     }
-
     if (!props.config || !('pages' in props.config)) {
-      throw new Error('Configuration is missing or invalid.');
+      return getErrorPage('500');
     }
 
     const pageComponent = props.config.pages[currentSectionHandle];
     if (!pageComponent) {
-      console.error(`No mapped page found for page handle: ${currentSectionHandle}`);
-      return null;
+      return getErrorPage('404');
     }
 
     return pageComponent;
+  }
+
+  function getErrorPage(errorCode: '404' | '500') {
+    const pageKey = `Page${errorCode}`;
+    if (props.config && props.config.pages[pageKey]) {
+      return props.config.pages[pageKey];
+    }
+
+    if (props.config && props.config.pages['Error']) {
+      return props.config.pages['Error'];
+    }
+
+    throw new Error(`Error: No page component mapped for error code: ${errorCode}`);
   }
 
   provide('config', props.config);
