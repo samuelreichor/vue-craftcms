@@ -8,6 +8,8 @@ export * from './composables/useCraftUrlBuilder';
 export * from './composables/useApi';
 export * from './types';
 
+export { CraftPage, CraftArea, CraftNotImplemented };
+
 export const defaultOptions: CraftCmsOptions = {
   baseUrl: '',
   registerComponents: true,

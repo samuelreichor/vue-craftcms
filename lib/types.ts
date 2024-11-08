@@ -6,7 +6,6 @@ export type Config = {
       [key: string]: Record<string, DefineComponent>;
     } & {
       Page404?: Record<string, DefineComponent>;
-      Page500?: Record<string, DefineComponent>;
       Error?: Record<string, DefineComponent>;
     }
   >;

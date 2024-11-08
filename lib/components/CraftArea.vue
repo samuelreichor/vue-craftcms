@@ -10,25 +10,20 @@
 
   const config = inject<Config>('config');
 
-  function getCurrentComponent(component: object) {
+  function getCurrentComponent(component: Object) {
     if (!config || !('components' in config)) {
-      throw new Error('Configuration is missing or invalid.');
+      throw new Error('Configuration is missing components or invalid. Check your config object');
     }
 
-    if (!('type' in component)) {
-      throw new Error('props.content has no key named type');
-    }
-
-    if (typeof component.type !== 'string') {
-      throw new Error('Component type is not a string');
+    if (!('type' in component) || typeof component.type !== 'string') {
+      throw new Error('Provided content has no valid type set. Check your queried data.');
     }
 
     const cName = component.type;
-
     const componentEl = config.components[cName];
+
     if (!componentEl) {
       console.error(`No mapped component found for component type: ${cName}`);
-      return null;
     }
 
     return componentEl;

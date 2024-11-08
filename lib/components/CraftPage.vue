@@ -14,32 +14,8 @@
     },
   });
 
-  function getCurrentSectionHandle(): string {
-    if (!('sectionHandle' in props.content)) {
-      return '404';
-    }
-    return props.content.sectionHandle;
-  }
-
-  function getCurrentPage() {
-    const currentSectionHandle = getCurrentSectionHandle();
-    if (currentSectionHandle === '404') {
-      return getErrorPage('404');
-    }
-    if (!props.config || !('pages' in props.config)) {
-      return getErrorPage('500');
-    }
-
-    const pageComponent = props.config.pages[currentSectionHandle];
-    if (!pageComponent) {
-      return getErrorPage('404');
-    }
-
-    return pageComponent;
-  }
-
-  function getErrorPage(errorCode: '404' | '500') {
-    const pageKey = `Page${errorCode}`;
+  function handleError(code: '404', msg: string) {
+    const pageKey = `Page${code}`;
     if (props.config && props.config.pages[pageKey]) {
       return props.config.pages[pageKey];
     }
@@ -48,7 +24,29 @@
       return props.config.pages['Error'];
     }
 
-    throw new Error(`Error: No page component mapped for error code: ${errorCode}`);
+    throw new Error(msg);
+  }
+
+  function getCurrentPage() {
+    if (!props.config || !('pages' in props.config)) {
+      throw new Error('Configuration is missing pages or invalid. Check your config object.');
+    }
+
+    if (!('sectionHandle' in props.content)) {
+      return handleError(
+        '404',
+        'Section handle not found in queried data. Check your query or prevent that by defining an Error Page.',
+      );
+    }
+
+    const currentSectionHandle = props.content.sectionHandle;
+    const pageComponent = props.config.pages[currentSectionHandle];
+
+    if (!pageComponent) {
+      console.error(`No mapped Page found for page: ${currentSectionHandle}`);
+    }
+
+    return pageComponent;
   }
 
   provide('config', props.config);
