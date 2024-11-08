@@ -1,7 +1,7 @@
 {
   "name": "vue-craftcms",
   "version": "0.1.2",
-  "description": "Craft querybuilder for vue",
+  "description": "Craft CMS querybuilder for vue",
   "private": false,
   "main": "./dist/vue-craftcms.umd.cjs",
   "module": "./dist/vue-craftcms.js",
@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/samuelreichor/vue-craftcms#readme",
   "dependencies": {
-    "js-craftcms-api": "^0.1.1",
+    "js-craftcms-api": "0.1.2",
     "vue": "^3.4.37"
   },
   "devDependencies": {
