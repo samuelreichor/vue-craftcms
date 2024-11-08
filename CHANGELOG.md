@@ -1,5 +1,12 @@
 # vue-craftcms
 
+## 0.2.0
+
+### Minor Changes
+
+- ce3613b: - Refactor error handling and export the components.
+  - Update playground for more examples.
+
 ## 0.1.2
 
 ### Patch Changes
