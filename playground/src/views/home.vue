@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { useCraftUrlBuilder } from '@vue-craftcms';
-  import { fetchData } from '../helpers/utils';
+  import { fetchData } from '../utils/fetcher';
   import { ref } from 'vue';
 
   const props = defineProps({

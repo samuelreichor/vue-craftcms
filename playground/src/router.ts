@@ -1,12 +1,7 @@
-import { createMemoryHistory, createRouter } from 'vue-router';
-
+import { createRouter, createWebHistory } from 'vue-router';
 import CraftRouter from './CraftRouter.vue';
 
-const routes = [{ path: '/:pathMatch(.*)*', name: 'CraftRouter', component: CraftRouter }];
-
-const router = createRouter({
-  history: createMemoryHistory(),
-  routes,
+export const router = createRouter({
+  history: createWebHistory(),
+  routes: [{ path: '/:pathMatch(.*)*', component: CraftRouter }],
 });
-
-export default router;

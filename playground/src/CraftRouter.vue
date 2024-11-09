@@ -1,11 +1,12 @@
 <script setup lang="ts">
-  import { useCraftUrlBuilder, type Config } from '@vue-craftcms';
-  import Home from './pages/home.vue';
-  import News from './pages/news.vue';
-  import { ref } from 'vue';
-  import { CraftNotImplemented } from '@vue-craftcms';
+  import { ref, watch } from 'vue';
+  import { useRoute } from 'vue-router';
+  import { useCraftUrlBuilder, CraftNotImplemented, type Config } from '@vue-craftcms';
+  import { fetchData } from './utils/fetcher';
+
+  import Home from './views/home.vue';
+  import News from './views/news.vue';
   import Headline from './components/headline.vue';
-  import { fetchData } from './helpers/utils';
 
   const mapping: Config = {
     pages: {
@@ -18,9 +19,18 @@
     },
   };
 
-  const uri = '__home__';
-  const queryPageUrl = useCraftUrlBuilder('entries').uri(uri).buildUrl('one');
-  const data = ref(await fetchData(queryPageUrl));
+  const route = useRoute();
+  const urlBuilder = useCraftUrlBuilder('entries');
+  const uri = ref(route.params.pathMatch || '__home__');
+  const data = ref(await fetchData(urlBuilder.uri(uri.value).buildUrl('one')));
+
+  watch(
+    () => route.fullPath,
+    async () => {
+      uri.value = route.params.pathMatch || '__home__';
+      data.value = await fetchData(urlBuilder.uri(uri.value).buildUrl('one'));
+    },
+  );
 </script>
 
 <template>
