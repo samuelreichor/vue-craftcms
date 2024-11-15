@@ -1,5 +1,8 @@
 <template>
-  <h3>Not Implemented Component: {{ $attrs.type }}</h3>
+  <h3>
+    Not Implemented {{ $attrs.type ? 'Component' : 'Page' }}:
+    {{ $attrs.type ? $attrs.type : $attrs.sectionHandle }}
+  </h3>
   <pre>
     {{ $attrs }}
   </pre>
