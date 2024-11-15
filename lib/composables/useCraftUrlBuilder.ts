@@ -1,6 +1,6 @@
 import { buildCraftQueryUrl } from 'js-craftcms-api';
 import { useCraft } from './useApi';
-import type { ElementType, ExecutionMethods } from 'js-craftcms-api';
+import type { ElementType, ExecutionMethod } from 'js-craftcms-api';
 
 export function useCraftUrlBuilder<T extends ElementType>(elementType: T) {
   const queryBuilder = buildCraftQueryUrl(elementType);
@@ -9,7 +9,7 @@ export function useCraftUrlBuilder<T extends ElementType>(elementType: T) {
   return {
     ...queryBuilder,
 
-    buildUrl(execOpt: ExecutionMethods) {
+    buildUrl(execOpt: ExecutionMethod) {
       const queryUrl = queryBuilder.buildBaseUrl(execOpt);
       const url = `${baseUrl}${queryUrl}`;
 
