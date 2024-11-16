@@ -14,20 +14,23 @@ export const defaultOptions: CraftCmsOptions = {
   baseUrl: '',
   registerComponents: true,
   debug: false,
+  enableEntryTypeMapping: true,
 };
 
 export const CraftCms = {
   install(app: App, options: CraftCmsOptions = defaultOptions) {
-    if (options.registerComponents) {
+    const mergedOptions: CraftCmsOptions = { ...defaultOptions, ...options };
+
+    if (mergedOptions.registerComponents) {
       app.component('CraftPage', CraftPage);
       app.component('CraftArea', CraftArea);
       app.component('CraftNotImplemented', CraftNotImplemented);
     }
 
-    app.provide('CraftCmsOptions', options);
+    app.provide('CraftCmsOptions', mergedOptions);
 
-    if (options.debug) {
-      console.log('Craft CMS Options', options);
+    if (mergedOptions.debug) {
+      console.log('Craft CMS Options', mergedOptions);
     }
   },
 };

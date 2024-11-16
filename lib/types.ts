@@ -16,8 +16,9 @@ export type Config = {
 
 export type CraftCmsOptions = {
   baseUrl: string;
-  registerComponents: boolean;
-  debug: boolean;
+  registerComponents?: boolean;
+  debug?: boolean;
+  enableEntryTypeMapping?: boolean;
 };
 
 type Prettify<T> = {
