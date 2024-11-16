@@ -9,6 +9,7 @@ app.use(router).use(CraftCms, {
   baseUrl: 'https://backend-craftcms.ddev.site:8443',
   debug: true,
   registerComponents: true,
+  enableEntryTypeMapping: true,
 });
 
 app.mount('#app');
