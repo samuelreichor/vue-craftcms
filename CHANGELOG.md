@@ -1,5 +1,14 @@
 # vue-craftcms
 
+## 0.2.1
+
+### Patch Changes
+
+- 1915ea2: Add better support for pages to CraftNotImplemented component.
+  Add support for entryTypes to mapping and according option to install method.
+  Update js-craftcms-api package.
+  Update Readme.
+
 ## 0.2.0
 
 ### Minor Changes
