@@ -11,53 +11,43 @@
 
 <p align="center">
   <a href="https://npmjs.com/package/vue-craftcms">
-    <img src="https://img.shields.io/npm/v/vue-craftcms/latest.svg?style=flat-square" alt="Vue craftcms latest version" />
+    <img src="https://img.shields.io/npm/v/vue-craftcms?color=blue" alt="Vue craftcms latest version" />
   </a>
   <a href="https://npmjs.com/package/vue-craftcms" rel="nofollow">
-    <img src="https://img.shields.io/npm/dt/vue-craftcms.svg?style=flat-square" alt="Vue craftcms downloads">
+    <img src="https://img.shields.io/npm/d18m/vue-craftcms?color=blue" alt="Vue craftcms downloads">
+  </a>
+  <a href="https://npmjs.com/package/vue-craftcms" rel="nofollow">
+    <img src="https://img.shields.io/github/license/samuelreichor/vue-craftcms?color=blue" alt="Vue craftcms license">
   </a>
 </p>
 
 > [!WARNING]  
 > This npm package is still in production and important features may change.
 
-## Installation
 
-Install `vue-craftcms`
+## Features
 
-```bash
-npm install -D vue-craftcms
-# yarn add -D vue-craftcms
-```
+- Easily build urls for the Craft Query API plugin directly from Vue.
+- Connect your data directly with your Vue components, to speed up development.
+- Avoid overfetching by using a custom function in the query builder to select only the fields you require.
+- Json Transformer are in place to prettify the response.
+- Query addresses, assets, entries and users.
 
-Register the plugin on your application (usually in main.ts) and add the baseUrl to your craft cms backend
+## Requirements
 
-```typescript
-import { CraftCms } from '@vue-craftcms';
-import { createApp } from 'vue';
-import App from './App.vue';
+This plugin requires Vue 3 and the [Craft Query API](https://github.com/samuelreichor/craft-query-api) installed on your Craft CMS instance.
 
-const app = createApp(App);
+## Documentation
 
-app.use(CraftCms, {
-  baseUrl: 'https://backend-craftcms.ddev.site',
-  debug: true,
-  registerComponents: true,
-});
+Visit the [Vue Craft CMS](https://samuelreichor.at/libraries/vue-craftcms) for all documentation, guides and developer resources.
 
-app.mount('#app');
-```
 
 ## Further Resources
 
-- [Craft CMS Plugin](https://github.com/samuelreichor/craft-query-api)
-- [Core JS Querybuilder](https://github.com/samuelreichor/js-craftcms-api)
-- [Nuxt Craft](https://github.com/samuelreichor/nuxt-craft)
+- [Craft CMS Plugin](https://github.com/samuelreichor/craft-query-api):  A Craft CMS Plugin, that powers this great stuff.
+- [Core JS Querybuilder](https://github.com/samuelreichor/js-craftcms-api): The core package, you can build wrappers around it to support your framework.
+- [Nuxt Craft](https://github.com/samuelreichor/nuxt-craft): A package to use the query builder in Nuxt.
 
 ## Support
 
-- Bugs or Feature Requests? [Submit an issue](/../../issues/new).
-
-## Contributing
-
-Contributions are welcome! <3
+If you encounter bugs or have feature requests, [please submit an issue](/../../issues/new). Your feedback helps improve the library!
