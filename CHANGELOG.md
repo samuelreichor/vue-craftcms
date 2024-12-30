@@ -1,5 +1,11 @@
 # vue-craftcms
 
+## 0.2.2
+
+### Patch Changes
+
+- fb8d3cb: Update js-craftcms api to 0.1.5.
+
 ## 0.2.1
 
 ### Patch Changes
