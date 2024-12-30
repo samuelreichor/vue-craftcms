@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/samuelreichor/vue-craftcms#readme",
   "dependencies": {
-    "js-craftcms-api": "0.1.4",
+    "js-craftcms-api": "0.1.5",
     "vue": "^3.4.37"
   },
   "devDependencies": {

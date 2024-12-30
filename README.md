@@ -45,7 +45,7 @@ Visit the [Vue Craft CMS](https://samuelreichor.at/libraries/vue-craftcms) for a
 ## Further Resources
 
 - [Craft CMS Plugin](https://github.com/samuelreichor/craft-query-api):  A Craft CMS Plugin, that powers this great stuff.
-- [Core JS Querybuilder](https://github.com/samuelreichor/js-craftcms-api): The core package, you can build wrappers around it to support your framework.
+- [JS Craft CMS API](https://github.com/samuelreichor/js-craftcms-api): The core package of the querybuilder.
 - [Nuxt Craft](https://github.com/samuelreichor/nuxt-craft): A package to use the query builder in Nuxt.
 
 ## Support
