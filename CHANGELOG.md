@@ -1,5 +1,12 @@
 # vue-craftcms
 
+## 0.2.3
+
+### Patch Changes
+
+- f674922: Add sitemap option to install method
+  Remove debug logging of install options
+
 ## 0.2.2
 
 ### Patch Changes
