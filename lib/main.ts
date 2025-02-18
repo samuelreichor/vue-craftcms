@@ -28,9 +28,5 @@ export const CraftCms = {
     }
 
     app.provide('CraftCmsOptions', mergedOptions);
-
-    if (mergedOptions.debug) {
-      console.log('Craft CMS Options', mergedOptions);
-    }
   },
 };

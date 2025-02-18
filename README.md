@@ -24,7 +24,6 @@
 > [!WARNING]  
 > This npm package is still in production and important features may change.
 
-
 ## Features
 
 - Easily build urls for the Craft Query API plugin directly from Vue.
@@ -41,10 +40,9 @@ This plugin requires Vue 3 and the [Craft Query API](https://github.com/samuelre
 
 Visit the [Vue Craft CMS](https://samuelreichor.at/libraries/vue-craftcms) for all documentation, guides and developer resources.
 
-
 ## Further Resources
 
-- [Craft CMS Plugin](https://github.com/samuelreichor/craft-query-api):  A Craft CMS Plugin, that powers this great stuff.
+- [Craft CMS Plugin](https://github.com/samuelreichor/craft-query-api): A Craft CMS Plugin, that powers this great stuff.
 - [JS Craft CMS API](https://github.com/samuelreichor/js-craftcms-api): The core package of the querybuilder.
 - [Nuxt Craft](https://github.com/samuelreichor/nuxt-craft): A package to use the query builder in Nuxt.
 

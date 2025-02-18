@@ -19,7 +19,15 @@ export type CraftCmsOptions = {
   registerComponents?: boolean;
   debug?: boolean;
   enableEntryTypeMapping?: boolean;
+  siteMap?: CraftSite;
 };
+
+export type CraftSiteValue = {
+  origin: string;
+  id?: number;
+};
+
+export type CraftSite<T extends string = string> = Record<T, CraftSiteValue>;
 
 type Prettify<T> = {
   [K in keyof T]: T[K];
