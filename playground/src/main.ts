@@ -6,10 +6,16 @@ import App from './App.vue';
 const app = createApp(App);
 
 app.use(router).use(CraftCms, {
-  baseUrl: 'https://backend-craftcms.ddev.site:8443',
+  baseUrl: 'https://backend-craftcms.ddev.site',
   debug: true,
   registerComponents: true,
   enableEntryTypeMapping: true,
+  siteMap: {
+    en: {
+      origin: 'https://example.com',
+      id: 3,
+    },
+  },
 });
 
 app.mount('#app');

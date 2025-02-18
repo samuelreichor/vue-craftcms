@@ -1,16 +1,6 @@
 <script setup lang="ts">
-  import { useCraftUrlBuilder } from '@vue-craftcms';
-  import { onMounted, ref } from 'vue';
-
-  const data = ref<unknown>();
-  const queryEntry = useCraftUrlBuilder('entries');
-
-  const queryNewsUrl = ref('');
-
-  const queryEntryUrl = useCraftUrlBuilder('entries')
-    .slug('news-article-1')
-    .section('news')
-    .buildUrl('one');
+  import { useCraft } from '@vue-craftcms';
+  console.log(useCraft());
 </script>
 
 <template>

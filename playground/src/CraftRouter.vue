@@ -11,7 +11,7 @@
   const mapping: Config = {
     pages: {
       home: Home,
-      news: News,
+      'news:home': News,
     },
     components: {
       headline: Headline,
@@ -28,6 +28,7 @@
     () => route.fullPath,
     async () => {
       uri.value = route.params.pathMatch || '__home__';
+      console.log(uri.value);
       data.value = await fetchData(urlBuilder.uri(uri.value).buildUrl('one'));
     },
   );
