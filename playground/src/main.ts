@@ -10,12 +10,13 @@ app.use(router).use(CraftCms, {
   debug: true,
   registerComponents: true,
   enableEntryTypeMapping: true,
-  siteMap: {
-    en: {
+  siteMap: [
+    {
+      handle: 'en',
       origin: 'https://example.com',
       id: 3,
     },
-  },
+  ],
 });
 
 app.mount('#app');

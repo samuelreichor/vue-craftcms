@@ -15,6 +15,7 @@ export const defaultOptions: CraftCmsOptions = {
   registerComponents: true,
   debug: false,
   enableEntryTypeMapping: true,
+  siteMap: [],
 };
 
 export const CraftCms = {
