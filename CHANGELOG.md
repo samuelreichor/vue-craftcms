@@ -1,5 +1,15 @@
 # vue-craftcms
 
+## 0.3.0
+
+### Minor Changes
+
+- 1edb8d6: Change type of sitemap in install method from obj to arr
+
+### Patch Changes
+
+- 21b328d: Add more properties to CraftSite Type
+
 ## 0.2.3
 
 ### Patch Changes
