@@ -1,6 +1,6 @@
 {
   "name": "vue-craftcms",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Craft CMS querybuilder for vue",
   "private": false,
   "main": "./dist/vue-craftcms.umd.cjs",
