@@ -1,5 +1,11 @@
 # vue-craftcms
 
+## 0.3.1
+
+### Patch Changes
+
+- eb58f97: Add new properties to Craftsite type
+
 ## 0.2.4
 
 ### Patch Changes
