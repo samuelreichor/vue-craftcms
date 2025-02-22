@@ -6,7 +6,7 @@ import App from './App.vue';
 const app = createApp(App);
 
 app.use(router).use(CraftCms, {
-  baseUrl: 'https://backend-craftcms.ddev.site',
+  baseUrl: 'https://backend-craftcms.ddev.site:8443',
   debug: true,
   registerComponents: true,
   enableEntryTypeMapping: true,

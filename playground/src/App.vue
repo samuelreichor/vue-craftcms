@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { useCraft } from '@vue-craftcms';
-  console.log(useCraft());
+  const { baseUrl, siteMap } = useCraft();
+  console.log(baseUrl, siteMap);
 </script>
 
 <template>

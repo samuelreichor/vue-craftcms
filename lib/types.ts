@@ -26,6 +26,10 @@ export type CraftSite = {
   handle: string;
   origin: string;
   id?: number;
+  label?: string;
+  path?: string;
+  lang?: string;
+  primary?: boolean;
 };
 
 export type CraftSites = CraftSite[];
