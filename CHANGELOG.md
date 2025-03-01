@@ -1,5 +1,11 @@
 # vue-craftcms
 
+## 0.3.2
+
+### Patch Changes
+
+- c7c8655: Fix extraneous non-props error in craft area
+
 ## 0.3.1
 
 ### Patch Changes
