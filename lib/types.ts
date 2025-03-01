@@ -34,6 +34,11 @@ export type CraftSite = {
 
 export type CraftSites = CraftSite[];
 
+export type CraftAreaComponent = {
+  knownKey: string;
+  [key: string]: unknown;
+};
+
 type Prettify<T> = {
   [K in keyof T]: T[K];
 } & {};

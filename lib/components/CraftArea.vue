@@ -1,25 +1,28 @@
 <script lang="ts" setup>
-  import type { Config } from '../types';
+  import type { Config, CraftAreaComponent } from '../types';
   import { inject } from 'vue';
+  import type { PropType } from 'vue';
   const props = defineProps({
     content: {
-      type: Object,
+      type: Array as PropType<unknown[]>,
       required: true,
     },
   });
 
   const config = inject<Config>('config');
 
-  function getCurrentComponent(component: Object) {
+  function getCurrentComponent(component: unknown) {
     if (!config || !('components' in config)) {
       throw new Error('Configuration is missing components or invalid. Check your config object');
     }
 
-    if (!('type' in component) || typeof component.type !== 'string') {
+    const typedComponent = component as CraftAreaComponent;
+
+    if (!('type' in typedComponent) || typeof typedComponent.type !== 'string') {
       throw new Error('Provided content has no valid type set. Check your queried data.');
     }
 
-    const cName = component.type;
+    const cName = typedComponent.type;
     const componentEl = config.components[cName];
 
     if (!componentEl) {
@@ -31,7 +34,9 @@
 </script>
 
 <template>
-  <div v-for="(component, index) in props.content" :key="index">
-    <component :is="getCurrentComponent(component)" v-bind="component" />
+  <div>
+    <div v-for="(component, index) in props.content" :key="index">
+      <component :is="getCurrentComponent(component)" v-bind="component as CraftAreaComponent" />
+    </div>
   </div>
 </template>
