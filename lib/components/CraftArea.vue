@@ -1,9 +1,10 @@
 <script lang="ts" setup>
   import type { Config } from '../types';
   import { inject } from 'vue';
+  import type { PropType } from 'vue';
   const props = defineProps({
     content: {
-      type: Object,
+      type: Array as PropType<{ type: string }[]>,
       required: true,
     },
   });
@@ -31,7 +32,9 @@
 </script>
 
 <template>
-  <div v-for="(component, index) in props.content" :key="index">
-    <component :is="getCurrentComponent(component)" v-bind="component" />
+  <div>
+    <div v-for="(component, index) in props.content" :key="index">
+      <component :is="getCurrentComponent(component)" v-bind="component" />
+    </div>
   </div>
 </template>
