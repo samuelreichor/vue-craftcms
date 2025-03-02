@@ -1,5 +1,11 @@
 # vue-craftcms
 
+## 0.3.3
+
+### Patch Changes
+
+- dc065f6: Add site detection mode property to install method
+
 ## 0.3.2
 
 ### Patch Changes
