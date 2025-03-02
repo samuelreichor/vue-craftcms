@@ -10,12 +10,18 @@ export * from './types';
 
 export { CraftPage, CraftArea, CraftNotImplemented };
 
+export const siteDetectionMode = {
+  PATH: 'path',
+  ORIGIN: 'origin',
+} as const;
+
 export const defaultOptions: CraftCmsOptions = {
   baseUrl: '',
   registerComponents: true,
   debug: false,
   enableEntryTypeMapping: true,
   siteMap: [],
+  siteDetectionMode: siteDetectionMode.PATH,
 };
 
 export const CraftCms = {

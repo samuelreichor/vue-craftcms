@@ -1,4 +1,5 @@
 import type { DefineComponent } from 'vue';
+import { siteDetectionMode } from './main';
 
 export type Config = {
   pages: Prettify<
@@ -20,14 +21,15 @@ export type CraftCmsOptions = {
   debug?: boolean;
   enableEntryTypeMapping?: boolean;
   siteMap?: CraftSites;
+  siteDetectionMode?: SiteDetectionMode;
 };
 
 export type CraftSite = {
   handle: string;
   origin: string;
+  path: string;
   id?: number;
   label?: string;
-  path?: string;
   lang?: string;
   primary?: boolean;
 };
@@ -38,6 +40,8 @@ export type CraftAreaComponent = {
   knownKey: string;
   [key: string]: unknown;
 };
+
+export type SiteDetectionMode = (typeof siteDetectionMode)[keyof typeof siteDetectionMode];
 
 type Prettify<T> = {
   [K in keyof T]: T[K];

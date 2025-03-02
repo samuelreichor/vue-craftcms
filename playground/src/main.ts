@@ -13,7 +13,8 @@ app.use(router).use(CraftCms, {
   siteMap: [
     {
       handle: 'en',
-      origin: 'https://example.com',
+      path: '/',
+      origin: 'https://localhost:3000',
       id: 3,
     },
   ],
