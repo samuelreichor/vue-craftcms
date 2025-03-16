@@ -1,5 +1,11 @@
 # vue-craftcms
 
+## 0.3.4
+
+### Patch Changes
+
+- 2eeb4a5: Remove early day warning from readme
+
 ## 0.3.3
 
 ### Patch Changes
