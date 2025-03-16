@@ -21,15 +21,12 @@
   </a>
 </p>
 
-> [!WARNING]  
-> This npm package is still in production and important features may change.
-
 ## Features
 
-- Easily build urls for the Craft Query API plugin directly from Vue.
+- Easily build urls for the Craft Query API plugin directly from Vue using a Craft like query builder.
 - Connect your data directly with your Vue components, to speed up development.
 - Avoid overfetching by using a custom function in the query builder to select only the fields you require.
-- Json Transformer are in place to prettify the response.
+- Json Transformer in [Craft Query API](https://github.com/samuelreichor/craft-query-api) prettify the response.
 - Query addresses, assets, entries and users.
 
 ## Requirements

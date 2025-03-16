@@ -39,9 +39,9 @@
   "bugs": {
     "url": "https://github.com/samuelreichor/vue-craftcms/issues"
   },
-  "homepage": "https://github.com/samuelreichor/vue-craftcms#readme",
+  "homepage": "https://samuelreichor.at/libraries/vue-craftcms",
   "dependencies": {
-    "js-craftcms-api": "0.1.5",
+    "js-craftcms-api": "0.1.6",
     "vue": "^3.4.37"
   },
   "devDependencies": {
