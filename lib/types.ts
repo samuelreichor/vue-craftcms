@@ -17,6 +17,7 @@ export type Config = {
 
 export type CraftCmsOptions = {
   baseUrl: string;
+  authToken: string;
   registerComponents?: boolean;
   debug?: boolean;
   enableEntryTypeMapping?: boolean;

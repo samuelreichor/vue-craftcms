@@ -17,6 +17,7 @@ export const siteDetectionMode = {
 
 export const defaultOptions: CraftCmsOptions = {
   baseUrl: '',
+  authToken: '',
   registerComponents: true,
   debug: false,
   enableEntryTypeMapping: true,
