@@ -1,5 +1,11 @@
 # vue-craftcms
 
+## 0.4.0
+
+### Minor Changes
+
+- 97d1aae: Add authToken property to craft cms install options
+
 ## 0.3.4
 
 ### Patch Changes
