@@ -1,5 +1,12 @@
 # vue-craftcms
 
+## 0.4.1
+
+### Patch Changes
+
+- 4498c0d: Update js-craftcms-api to latest version to get admin() user query.
+  Update all npm packages
+
 ## 0.4.0
 
 ### Minor Changes
