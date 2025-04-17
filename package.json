@@ -8,9 +8,9 @@
   "types": "./dist/main.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/vue-craftcms.mjs",
+      "types": "./dist/main.d.ts",
       "require": "./dist/vue-craftcms.umd.js",
-      "types": "./dist/main.d.ts"
+      "default": "./dist/vue-craftcms.mjs"
     }
   },
   "scripts": {
@@ -41,8 +41,8 @@
   },
   "homepage": "https://samuelreichor.at/libraries/vue-craftcms",
   "dependencies": {
-    "js-craftcms-api": "0.1.6",
-    "vue": "^3.4.37"
+    "js-craftcms-api": "0.1.7",
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.9",
@@ -52,9 +52,9 @@
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "typescript": "5.6.3",
-    "vite": "^5.4.10",
+    "vite": "^6.3.1",
     "vite-plugin-dts": "^4.3.0",
-    "vitest": "^2.1.3",
+    "vitest": "^3.1.1",
     "vue-tsc": "^2.1.8"
   },
   "lint-staged": {
