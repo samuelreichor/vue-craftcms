@@ -1,5 +1,11 @@
 # vue-craftcms
 
+## 0.4.2
+
+### Patch Changes
+
+- d35b3c6: Update js-craftcms-api to enhance craft cms previews.
+
 ## 0.4.1
 
 ### Patch Changes
