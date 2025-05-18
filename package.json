@@ -41,7 +41,7 @@
   },
   "homepage": "https://samuelreichor.at/libraries/vue-craftcms",
   "dependencies": {
-    "js-craftcms-api": "0.1.7",
+    "js-craftcms-api": "0.1.8",
     "vue": "^3.5.13"
   },
   "devDependencies": {
