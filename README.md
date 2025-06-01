@@ -21,28 +21,35 @@
   </a>
 </p>
 
-## Features
+> [!WARNING]
+> This package is no longer actively maintained. Please use the new **[`@query-api/vue`](https://github.com/samuelreichor/query-api/tree/main/packages/vue)** instead. It's designed to be a drop-in replacement.
 
-- Easily build urls for the Craft Query API plugin directly from Vue using a Craft like query builder.
-- Connect your data directly with your Vue components, to speed up development.
-- Avoid overfetching by using a custom function in the query builder to select only the fields you require.
-- Json Transformer in [Craft Query API](https://github.com/samuelreichor/craft-query-api) prettify the response.
-- Query addresses, assets, entries and users.
+-----
 
-## Requirements
+## Why the Change?
 
-This plugin requires Vue 3 and the [Craft Query API](https://github.com/samuelreichor/craft-query-api) installed on your Craft CMS instance.
+Hi there! If you've found this package, thanks so much for checking it out. I've recently re-evaluated my code architecture and decided to adopt a monorepo approach for all the JavaScript SDKs. This change allows for better maintainability and collaboration across related projects.
 
-## Documentation
+The package you're likely looking for is the new **[`@query-api/vue`](https://github.com/samuelreichor/query-api/tree/main/packages/vue)**. It's designed to seamlessly replace `vue-craftcms`.
 
-Visit the [Vue Craft CMS](https://samuelreichor.at/libraries/vue-craftcms) for all documentation, guides and developer resources.
+-----
 
-## Further Resources
+## Migration Guide
 
-- [Craft CMS Plugin](https://github.com/samuelreichor/craft-query-api): A Craft CMS Plugin, that powers this great stuff.
-- [JS Craft CMS API](https://github.com/samuelreichor/js-craftcms-api): The core package of the querybuilder.
-- [Nuxt Craft](https://github.com/samuelreichor/nuxt-craft): A package to use the query builder in Nuxt.
+Migrating to the new package is straightforward:
 
-## Support
+1.  **Update Imports:** Replace all instances of `vue-craftcms` in your import statements with `@query-api/vue`.
+    ```typescript
+    // Before
+    import { someFeature } from 'vue-craftcms';
+    // After
+    import { someFeature } from '@query-api/vue';
+    ```
 
-If you encounter bugs or have feature requests, [please submit an issue](/../../issues/new). Your feedback helps improve the library!
+-----
+
+## Need Help?
+
+I apologize for any inconvenience this transition may cause. If you encounter any issues during the migration or have questions, please don't hesitate to reach out\!
+
+Happy coding!
