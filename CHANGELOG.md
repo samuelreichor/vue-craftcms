@@ -1,5 +1,11 @@
 # vue-craftcms
 
+## 0.4.3
+
+### Patch Changes
+
+- e668506: This package is no longer actively maintained. Please use the new **[`@query-api/vue`](https://github.com/samuelreichor/query-api/tree/main/packages/vue)** instead.
+
 ## 0.4.2
 
 ### Patch Changes
